@@ -1,0 +1,101 @@
+
+########################################################
+# INSTALACION DE SERVICIOS PARA LINUX DEBIAN
+########################################################
+
+
+
+############################
+# OPENSSH
+############################
+apt install openssh-server -y
+ 
+
+#########
+# APACHE 
+#########
+apt-get install apache2 -y
+apt-get install libapache2-mod-php5 -y
+
+#########
+# CURL 
+#########
+apt-get install curl -y
+apt-get install libcurl3  -y
+apt-get install libcurl3-dev  -y
+
+
+#########
+# XMLSEC 
+#########
+apt-get install xmlsec1 -y
+
+
+############################
+# PHP ( VERSION ACTUAL )
+############################
+apt install php -y
+apt install php-curl -y
+apt install php-xml -y
+apt install php-gd -y
+apt install php-json -y
+
+
+
+#########
+# PHP 5
+#########
+apt-get install php5 
+apt-get install php5-curl -y
+apt-get install php5-mysqlnd  -y
+apt-get install php5-curl  -y
+apt-get install php5-gd  -y
+apt-get install php5-intl  -y
+apt-get install php-pear  -y
+apt-get install php5-imagick  -y
+apt-get install php5-imap  -y
+apt-get install php5-mcrypt  -y
+apt-get install php5-memcache  -y
+apt-get install php5-pspell -y
+apt-get install php5-recode  -y
+apt-get install php5-snmp  -y
+apt-get install php5-tidy  -y
+apt-get install php5-xmlrpc  -y
+apt-get install php5-xsl -y
+
+
+
+
+#########
+# FTP
+#########
+apt-get install vsftpd -y
+#
+# CONFIGURAR
+# habilitar escritura  write_enable=YES"
+# nano /etc/vsftpd.conf
+
+
+
+
+#########
+# MYSQL
+#########
+apt install mariadb-server -y
+apt install mariadb-client -y
+#
+# CONFIGURAR
+# systemctl enable mariadb
+# systemctl start mariadb
+# systemctl status mariadb
+#
+# mariadb -u root -p
+# CREATE USER 'usuarioxxx'@'localhost' IDENTIFIED BY 'clavexxx';
+# GRANT ALL PRIVILEGES ON *.* to 'usuarioxxx'@'localhost';
+# FLUSH PRIVILEGES;
+
+
+# mariadb -u root -p
+# CREATE USER 'matias'@'localhost' IDENTIFIED BY 'Cagon2016';
+# GRANT ALL PRIVILEGES ON *.* to 'matias'@'localhost';
+# FLUSH PRIVILEGES;
