@@ -88,14 +88,9 @@ apt install mariadb-client -y
 # systemctl enable mariadb
 # systemctl start mariadb
 # systemctl status mariadb
-#
+# 
+# CREAR ADMIN Y DAR PERMISOS GRANT
 # mariadb -u root -p
-# CREATE USER 'usuarioxxx'@'localhost' IDENTIFIED BY 'clavexxx';
-# GRANT ALL PRIVILEGES ON *.* to 'usuarioxxx'@'localhost';
-# FLUSH PRIVILEGES;
-
-
-# mariadb -u root -p
-# CREATE USER 'matias'@'localhost' IDENTIFIED BY 'Cagon2016';
-# GRANT ALL PRIVILEGES ON *.* to 'matias'@'localhost';
+# CREATE USER 'usuarioNN'@'localhost' IDENTIFIED BY 'claveNN';
+# GRANT ALL PRIVILEGES ON *.* to 'usuarioNN'@'localhost';
 # FLUSH PRIVILEGES;
