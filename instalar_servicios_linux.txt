@@ -15,14 +15,14 @@ apt install openssh-server -y
 # APACHE 
 #########
 apt-get install apache2 -y
-apt-get install libapache2-mod-php5 -y
+apt-get install libapache2-mod-php -y
 
 #########
 # CURL 
 #########
 apt-get install curl -y
-apt-get install libcurl3  -y
-apt-get install libcurl3-dev  -y
+apt-get install libcurl  -y
+apt-get install libcurl-dev  -y
 
 
 #########
@@ -32,7 +32,7 @@ apt-get install xmlsec1 -y
 
 
 ############################
-# PHP ( VERSION ACTUAL )
+# PHP  
 ############################
 apt install php -y
 apt install php-curl -y
@@ -40,10 +40,42 @@ apt install php-xml -y
 apt install php-gd -y
 apt install php-json -y
 
+#########
+# FTP
+#########
+apt-get install vsftpd -y
+#
+# CONFIGURAR
+# habilitar escritura  write_enable=YES"
+# nano /etc/vsftpd.conf
+
+#########
+# MYSQL
+#########
+apt install mariadb-server -y
+apt install mariadb-client -y
+#
+# CONFIGURAR
+# systemctl enable mariadb
+# systemctl start mariadb
+# systemctl status mariadb
+# 
+# CREAR ADMIN Y DAR PERMISOS GRANT
+# mariadb -u root -p
+# CREATE USER 'usuarioNN'@'localhost' IDENTIFIED BY 'claveNN';
+# GRANT ALL PRIVILEGES ON *.* to 'usuarioNN'@'localhost';
+# FLUSH PRIVILEGES;
+
+#############
+# PHPMYADMIN
+##############
+apt install phpmyadmin -y
+
+
 
 
 #########
-# PHP 5
+# PHP 5 
 #########
 apt-get install php5 
 apt-get install php5-curl -y
@@ -62,35 +94,3 @@ apt-get install php5-snmp  -y
 apt-get install php5-tidy  -y
 apt-get install php5-xmlrpc  -y
 apt-get install php5-xsl -y
-
-
-
-
-#########
-# FTP
-#########
-apt-get install vsftpd -y
-#
-# CONFIGURAR
-# habilitar escritura  write_enable=YES"
-# nano /etc/vsftpd.conf
-
-
-
-
-#########
-# MYSQL
-#########
-apt install mariadb-server -y
-apt install mariadb-client -y
-#
-# CONFIGURAR
-# systemctl enable mariadb
-# systemctl start mariadb
-# systemctl status mariadb
-# 
-# CREAR ADMIN Y DAR PERMISOS GRANT
-# mariadb -u root -p
-# CREATE USER 'usuarioNN'@'localhost' IDENTIFIED BY 'claveNN';
-# GRANT ALL PRIVILEGES ON *.* to 'usuarioNN'@'localhost';
-# FLUSH PRIVILEGES;
