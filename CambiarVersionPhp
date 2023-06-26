@@ -16,4 +16,7 @@ Actualizar: apt update
 Instalar: apt install php5.6
 Cambiar Versión: update-alternatives --config php
 
+## MySql
+apt install php5.6-mysql
+
 Fuente: https://tecadmin.net/how-to-install-php-on-debian-11/
