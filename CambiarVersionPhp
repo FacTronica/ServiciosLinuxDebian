@@ -1,0 +1,19 @@
+# Cambiar Versión de Php en Debian
+
+## Instructivo con los pasos a seguir para cambiar la versión de php instalada en el servidor.
+
+Esto es de utilidad al tener la versión actual de debian pero se requiere una versión menor de php.
+
+## Prerequisites:
+apt update
+apt install software-properties-common ca-certificates lsb-release apt-transport-https 
+
+## Instalación:
+Editar: nano /etc/apt/sources.list
+Agregar: deb https://packages.sury.org/php/ bullseye main
+Obtener: wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
+Actualizar: apt update
+Instalar: apt install php5.6
+Cambiar Versión: update-alternatives --config php
+
+Fuente: https://tecadmin.net/how-to-install-php-on-debian-11/
