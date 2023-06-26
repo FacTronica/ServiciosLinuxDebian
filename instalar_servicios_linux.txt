@@ -94,3 +94,13 @@ apt-get install php5-snmp  -y
 apt-get install php5-tidy  -y
 apt-get install php5-xmlrpc  -y
 apt-get install php5-xsl -y
+
+
+##############
+# a2ensite
+###############
+sudo apt-get install devscripts dpkg-dev build-essential
+sudo apt-get build-dep apache2
+dget http://httpredir.debian.org/debian/pool/main/a/apache2/apache2_2.4.23-5.dsc
+cd apache2-2.4.23
+dpkg-buildpackage -us -uc
