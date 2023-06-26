@@ -20,3 +20,6 @@ Cambiar Versión: update-alternatives --config php
 apt install php5.6-mysql
 
 Fuente: https://tecadmin.net/how-to-install-php-on-debian-11/
+
+Para Cambiar entre versiones de php
+fuente: https://tecadmin.net/install-multiple-php-version-with-apache-on-debian/
