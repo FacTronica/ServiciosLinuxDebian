@@ -65,6 +65,13 @@ apt install mariadb-client -y
 # CREATE USER 'usuarioNN'@'localhost' IDENTIFIED BY 'claveNN';
 # GRANT ALL PRIVILEGES ON *.* to 'usuarioNN'@'localhost';
 # FLUSH PRIVILEGES;
+#
+# PARA NO FORZAR A INSERTAR TODOS LOS CAMPOS EN SQL
+nano /etc/mysql/mariadb.conf.d/50-server.cnf
+[mysqld] 
+sql-mode="NO_ENGINE_SUBSTITUTION" 
+En algunas versiones hay que ponerlo así sql_mode="NO_ENGINE_SUBSTITUTION"
+
 
 #############
 # PHPMYADMIN
