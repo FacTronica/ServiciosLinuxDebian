@@ -68,10 +68,14 @@ apt install mariadb-client -y
 #
 # Cómo solucionar error 1364 Field doesn't have default value
 # PARA NO FORZAR A INSERTAR TODOS LOS CAMPOS EN SQL
-nano /etc/mysql/mariadb.conf.d/50-server.cnf
-[mysqld] 
-sql-mode="NO_ENGINE_SUBSTITUTION" 
-En algunas versiones hay que ponerlo así sql_mode="NO_ENGINE_SUBSTITUTION"
+# nano /etc/mysql/mariadb.conf.d/50-server.cnf
+# [mysqld] 
+# sql-mode="NO_ENGINE_SUBSTITUTION" 
+# En algunas versiones hay que ponerlo así sql_mode="NO_ENGINE_SUBSTITUTION"
+#
+# IMPORTAR BASE DE DATOS:
+# mysql -u username -p database_name < file.sql;
+# 
 
 
 #############
