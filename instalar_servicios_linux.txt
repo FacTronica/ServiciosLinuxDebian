@@ -76,6 +76,10 @@ apt install mariadb-client -y
 # IMPORTAR BASE DE DATOS:
 # mysql -u username -p database_name < file.sql;
 # 
+# CODIFICACION DE CARACTERES DE BD
+# Editar header.php y agregar
+# mysql_set_charset("latin1",$link_dbserver);
+# mysql_set_charset("latin1",$link_sistema);
 
 
 #############
