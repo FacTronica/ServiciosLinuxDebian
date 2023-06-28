@@ -14,11 +14,11 @@ Editar: nano /etc/apt/sources.list
 Agregar: deb https://packages.sury.org/php/ bullseye main
 Obtener: wget -qO - https://packages.sury.org/php/apt.gpg | apt-key add -
 Actualizar: apt update
-Instalar: apt install php5.6
+Instalar: apt install php5.6 -y
 Cambiar Versión: update-alternatives --config php
 
 ## MySql
-apt install php5.6-mysql
+apt install php5.6-mysql -y
 
 Fuente: https://tecadmin.net/how-to-install-php-on-debian-11/
 
