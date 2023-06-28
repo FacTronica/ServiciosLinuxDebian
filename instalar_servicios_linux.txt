@@ -12,23 +12,26 @@ apt install openssh-server -y
  
 
 #########
-# APACHE 
-#########
-apt-get install apache2 -y
-apt-get install libapache2-mod-php -y
-
-#########
 # CURL 
 #########
 apt-get install curl -y
 apt-get install libcurl  -y
 apt-get install libcurl-dev  -y
+apt install libcurl4-openssl-dev -y
+apt install libcurl4-nss-dev -y
+apt install libcurl4-gnutls-dev -y
+
+#########
+# APACHE 
+#########
+apt-get install apache2 -y
+apt-get install libapache2-mod-php -y
 
 
 #########
 # XMLSEC 
 #########
-apt-get install xmlsec1 -y
+apt install xmlsec1 -y
 
 
 ############################
@@ -43,7 +46,7 @@ apt install php-json -y
 #########
 # FTP
 #########
-apt-get install vsftpd -y
+apt install vsftpd -y
 #
 # CONFIGURAR
 # habilitar escritura  write_enable=YES"
