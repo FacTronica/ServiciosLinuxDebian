@@ -9,9 +9,10 @@ apt update
 apt install software-properties-common ca-certificates lsb-release apt-transport-https 
 
 ## Instalación:
+apt install gnupg
 Editar: nano /etc/apt/sources.list
 Agregar: deb https://packages.sury.org/php/ bullseye main
-Obtener: wget -qO - https://packages.sury.org/php/apt.gpg | sudo apt-key add -
+Obtener: wget -qO - https://packages.sury.org/php/apt.gpg | apt-key add -
 Actualizar: apt update
 Instalar: apt install php5.6
 Cambiar Versión: update-alternatives --config php
