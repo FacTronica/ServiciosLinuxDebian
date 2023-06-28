@@ -1,5 +1,7 @@
 cd /etc/apache2/sites-available
+
 nano misitio.conf  
+
 <VirtualHost *:80>
     ServerName misitio.com
     ServerAlias www.misitio.com
@@ -12,3 +14,6 @@ nano misitio.conf
     </Directory>
 </VirtualHost>
   
+a2ensite factronica.conf 
+
+systemctl reload apache2
