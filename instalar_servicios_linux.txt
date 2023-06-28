@@ -126,3 +126,12 @@ sudo apt-get build-dep apache2
 dget http://httpredir.debian.org/debian/pool/main/a/apache2/apache2_2.4.23-5.dsc
 cd apache2-2.4.23
 dpkg-buildpackage -us -uc
+
+
+
+#################
+# Activar root para poder crear nuevos usuarios
+#################
+# $ su -l
+# adduser <your_username_here> sudo
+# logout
