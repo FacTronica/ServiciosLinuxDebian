@@ -63,7 +63,7 @@ apt install mariadb-client -y
 # systemctl start mariadb
 # systemctl status mariadb
 # 
-# CREAR ADMIN Y DAR PERMISOS GRANT
+# CREAR ADMIN
 # mariadb -u root -p
 # CREATE USER 'usuarioNN'@'localhost' IDENTIFIED BY 'claveNN';
 # GRANT ALL PRIVILEGES ON *.* to 'usuarioNN'@'localhost';
@@ -78,12 +78,6 @@ apt install mariadb-client -y
 #
 # IMPORTAR BASE DE DATOS:
 # mysql -u username -p database_name < file.sql;
-# 
-# CODIFICACION DE CARACTERES DE BD
-# Editar header.php y agregar
-# mysql_set_charset("latin1",$link_dbserver);
-# mysql_set_charset("latin1",$link_sistema);
-
 
 #############
 # PHPMYADMIN
@@ -91,6 +85,13 @@ apt install mariadb-client -y
 apt install phpmyadmin -y
 
 
+##################
+# ERP FACTRONICA
+##################
+# EN ERP CODIFICACION DE CARACTERES DE BD
+# Editar header.php y agregar
+# mysql_set_charset("latin1",$link_dbserver);
+# mysql_set_charset("latin1",$link_sistema);
 
 
 #########
