@@ -13,7 +13,18 @@ nano misitio.conf
         AllowOverride All
     </Directory>
 </VirtualHost>
-  
-a2ensite factronica.conf 
 
+Agregar:
+a2ensite misitio.conf 
+
+Quitar:
+a2dissite misitio.conf
+
+Reiniciar:
 systemctl reload apache2
+
+Estado:
+service apache2 status
+
+ConfigTest:
+apache2ctl configtest
