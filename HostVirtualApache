@@ -1,0 +1,14 @@
+cd /etc/apache2/sites-available
+nano misitio.conf  
+<VirtualHost *:80>
+    ServerName misitio.com
+    ServerAlias www.misitio.com
+    ServerAdmin misitio.com@gmail.com
+    DocumentRoot /var/www/misitio/public_html
+    #Redirect permanent /https://misitio.com
+    <Directory /var/www/misitio/public_html>
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+    </Directory>
+</VirtualHost>
+  
