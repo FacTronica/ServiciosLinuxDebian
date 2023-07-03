@@ -2,7 +2,9 @@
 ########################################################
 # INSTALACION DE SERVICIOS PARA LINUX DEBIAN
 ########################################################
-
+#
+# apt autoremove = Eliinar paquetes que no son necesarios
+#
 
 
 ############################
