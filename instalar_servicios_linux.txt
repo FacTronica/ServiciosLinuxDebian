@@ -32,6 +32,11 @@ apt install bind9utils -y
 apt install bind9-dnsutils -y
 apt install bind9-doc -y
 apt install bind9-host -y
+# named -v
+# systemctl start named
+# systemctl enable named
+# systemctl status named
+# cd /etc/bind/
 
 #########
 # APACHE 
