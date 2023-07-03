@@ -21,6 +21,16 @@ apt install libcurl4-openssl-dev -y
 apt install libcurl4-nss-dev -y
 apt install libcurl4-gnutls-dev -y
 
+
+###############
+# DNS BIND9
+###############
+apt install bind9 -y
+apt install bind9utils -y
+apt install bind9-dnsutils -y
+apt install bind9-doc -y
+apt install bind9-host -y
+
 #########
 # APACHE 
 #########
