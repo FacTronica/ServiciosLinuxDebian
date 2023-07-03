@@ -1,0 +1,15 @@
+$TTL 14400
+dominio.tld.  86400   IN       SOA     maquina.dominio.tld.  correo.gmail.com.    (
+    2023061201 ;Serial Number
+    3600 ;refresh
+    1800 ;retry
+    1209600 ;expire
+    86400 ;minimum
+)
+dominio.tld.  86400   IN       NS      maquina.dominio.tld.
+dominio.tld.  14400   IN       A       11.22.33.44    
+dominio.tld.  14400   IN       MX      0       dominio.tld.
+mail            14400   IN      CNAME   dominio.tld.
+www             14400   IN      CNAME   dominio.tld.
+ftp             14400   IN      A       11.22.33.44
+maquina        14400   IN      A       11.22.33.44
