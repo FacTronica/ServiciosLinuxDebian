@@ -182,3 +182,9 @@ dpkg-buildpackage -us -uc
 #
 # apt autoremove = Eliinar paquetes que no son necesarios
 #
+
+
+#################################
+# INSTALAR PHP5.6 EN DEBIAN 12
+#################################
+#https://tecadmin.net/how-to-install-php-on-debian-11/
