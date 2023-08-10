@@ -37,25 +37,25 @@ apt install xmlsec1 -y
 
 
 #########
-# PHP 5 
+# PHP 5.6 
 #########
-apt-get install php5 
-apt-get install php5-curl -y
-apt-get install php5-mysqlnd  -y
-apt-get install php5-curl  -y
-apt-get install php5-gd  -y
-apt-get install php5-intl  -y
-apt-get install php-pear  -y
-apt-get install php5-imagick  -y
-apt-get install php5-imap  -y
-apt-get install php5-mcrypt  -y
-apt-get install php5-memcache  -y
-apt-get install php5-pspell -y
-apt-get install php5-recode  -y
-apt-get install php5-snmp  -y
-apt-get install php5-tidy  -y
-apt-get install php5-xmlrpc  -y
-apt-get install php5-xsl -y
+apt-get install php5.6 
+apt-get install php5.6-curl -y
+apt-get install php5.6-mysqlnd  -y
+apt-get install php5.6-curl  -y
+apt-get install php5.6-gd  -y
+apt-get install php5.6-intl  -y
+apt-get install php5.6-pear  -y
+apt-get install php5.6-imagick  -y
+apt-get install php5.6-imap  -y
+apt-get install php5.6-mcrypt  -y
+apt-get install php5.6-memcache  -y
+apt-get install php5.6-pspell -y
+apt-get install php5.6-recode  -y
+apt-get install php5.6-snmp  -y
+apt-get install php5.6-tidy  -y
+apt-get install php5.6-xmlrpc  -y
+apt-get install php5.6-xsl -y
 apt-get install php5.6-xml -y
 
 
