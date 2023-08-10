@@ -1,11 +1,9 @@
-
 ########################################################
-# INSTALACION DE SERVICIOS PARA LINUX DEBIAN
+# ACTUALIZACION LINUX DEBIAN
 ########################################################
 #
-# apt autoremove = Eliinar paquetes que no son necesarios
-#
-
+apt update
+apt upgrade
 
 ############################
 # OPENSSH
@@ -24,20 +22,6 @@ apt install libcurl4-nss-dev -y
 apt install libcurl4-gnutls-dev -y
 
 
-###############
-# DNS BIND9
-###############
-apt install bind9 -y
-apt install bind9utils -y
-apt install bind9-dnsutils -y
-apt install bind9-doc -y
-apt install bind9-host -y
-# named -v
-# systemctl start named
-# systemctl enable named
-# systemctl status named
-# cd /etc/bind/
-
 #########
 # APACHE 
 #########
@@ -50,65 +34,6 @@ apt-get install libapache2-mod-php -y
 #########
 apt install xmlsec1 -y
 
-
-############################
-# PHP  
-############################
-apt install php -y
-apt install php-curl -y
-apt install php-xml -y
-apt install php-gd -y
-apt install php-json -y
-
-#########
-# FTP
-#########
-apt install vsftpd -y
-#
-# CONFIGURAR
-# habilitar escritura  write_enable=YES"
-# nano /etc/vsftpd.conf
-
-#########
-# MYSQL
-#########
-apt install mariadb-server -y
-apt install mariadb-client -y
-#
-# CONFIGURAR
-# systemctl enable mariadb
-# systemctl start mariadb
-# systemctl status mariadb
-# 
-# CREAR ADMIN
-# mariadb -u root -p
-# CREATE USER 'usuarioNN'@'localhost' IDENTIFIED BY 'claveNN';
-# GRANT ALL PRIVILEGES ON *.* to 'usuarioNN'@'localhost';
-# FLUSH PRIVILEGES;
-#
-# Cómo solucionar error 1364 Field doesn't have default value
-# PARA NO FORZAR A INSERTAR TODOS LOS CAMPOS EN SQL
-# nano /etc/mysql/mariadb.conf.d/50-server.cnf
-# [mysqld] 
-# sql-mode="NO_ENGINE_SUBSTITUTION" 
-# En algunas versiones hay que ponerlo así sql_mode="NO_ENGINE_SUBSTITUTION"
-#
-# IMPORTAR BASE DE DATOS:
-# mysql -u username -p database_name < file.sql;
-
-#############
-# PHPMYADMIN
-##############
-apt install phpmyadmin -y
-
-
-##################
-# ERP FACTRONICA
-##################
-# EN ERP CODIFICACION DE CARACTERES DE BD
-# Editar header.php y agregar
-# mysql_set_charset("latin1",$link_dbserver);
-# mysql_set_charset("latin1",$link_sistema);
 
 
 #########
@@ -131,7 +56,104 @@ apt-get install php5-snmp  -y
 apt-get install php5-tidy  -y
 apt-get install php5-xmlrpc  -y
 apt-get install php5-xsl -y
-apt-get install php5.6-xml -y ( para que funcione utf8_encode debe instalar este módulo )
+apt-get install php5.6-xml -y
+
+
+
+
+############################
+# PHP  
+############################
+apt install php -y
+apt install php-curl -y
+apt install php-xml -y
+apt install php-gd -y
+apt install php-json -y
+
+#########
+# MYSQL
+#########
+apt install mariadb-server -y
+apt install mariadb-client -y
+#
+# HABILITAR
+systemctl enable mariadb
+systemctl start mariadb
+systemctl status mariadb
+
+
+
+######################
+# CREAR ADMIN MYSQL
+######################
+mariadb -u root -p
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'claveNN';
+GRANT ALL PRIVILEGES ON *.* to 'usuarioNN'@'localhost';
+FLUSH PRIVILEGES;
+
+
+#############
+# PHPMYADMIN
+##############
+apt install phpmyadmin -y
+
+
+#########
+# FTP
+#########
+apt install vsftpd -y
+# habilitar escritura  write_enable=YES"
+nano /etc/vsftpd.conf
+/etc/init.d/vsftpd restart
+
+
+
+########################
+# FINETUNNING MARIADB
+########################
+# Cómo solucionar error 1364 Field doesn't have default value
+# PARA NO FORZAR A INSERTAR TODOS LOS CAMPOS EN SQL
+# nano /etc/mysql/mariadb.conf.d/50-server.cnf
+# [mysqld] 
+# sql-mode="NO_ENGINE_SUBSTITUTION" 
+# En algunas versiones hay que ponerlo así sql_mode="NO_ENGINE_SUBSTITUTION"
+#
+# IMPORTAR BASE DE DATOS:
+# mysql -u username -p database_name < file.sql;
+
+
+
+###############
+# DNS BIND9
+###############
+apt install bind9 -y
+apt install bind9utils -y
+apt install bind9-dnsutils -y
+apt install bind9-doc -y
+apt install bind9-host -y
+# named -v
+# systemctl start named
+# systemctl enable named
+# systemctl status named
+# cd /etc/bind/
+
+
+
+
+
+
+
+
+##################
+# ERP FACTRONICA
+##################
+# EN ERP CODIFICACION DE CARACTERES DE BD
+# Editar header.php y agregar
+# mysql_set_charset("latin1",$link_dbserver);
+# mysql_set_charset("latin1",$link_sistema);
+
+
+
 
 
 
@@ -152,3 +174,11 @@ dpkg-buildpackage -us -uc
 # $ su -l
 # adduser <your_username_here> sudo
 # logout
+
+
+########################################################
+# INSTALACION DE SERVICIOS PARA LINUX DEBIAN
+########################################################
+#
+# apt autoremove = Eliinar paquetes que no son necesarios
+#
