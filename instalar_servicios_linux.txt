@@ -188,3 +188,5 @@ dpkg-buildpackage -us -uc
 # INSTALAR PHP5.6 EN DEBIAN 12
 #################################
 #https://tecadmin.net/how-to-install-php-on-debian-11/
+# desinstalar
+# https://techlandia.com/reinstalar-apache-linux-como_498287/
